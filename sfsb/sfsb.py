@@ -49,6 +49,7 @@ async def main():
     token, session = await api.prepare()
     await api.subscribe(token, session, ["pow"])
     await asyncio.sleep(60)
+    await api.unsubscribe(token, session, ["pow"])
 
 
 api = cortex.Wrapper(client_id=Config.emotiv.get("Client_ID"), client_secret=Config.emotiv.get("Client_Secret"),
