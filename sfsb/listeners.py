@@ -1,4 +1,4 @@
-import cortex.api as cortex
+import cortex
 
 
 class PowerListener(cortex.Listener):
