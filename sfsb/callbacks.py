@@ -29,9 +29,17 @@ def pow_handler(data):
         print("경고")
 
 
-def met_handler(cls, data):
-    print(data["foc"])
+def met_handler(data):
+    eng = data["eng"]
+    exc = data["exc"]
+    stress = data["str"]
+    rel = data["rel"]
+    interest = data["int"]
+    foc = data["foc"]
+
+    val = (exc + stress) / (foc + rel)
+    print(val)
 
 
-def mot_handler(cls, data):
+def mot_handler(data):
     pass
