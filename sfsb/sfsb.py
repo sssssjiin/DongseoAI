@@ -28,6 +28,6 @@ api.register_listener(listeners.MetricListener(callbacks.met_handler))
 
 scheduler = BackgroundScheduler()
 scheduler.start()
-scheduler.add_job(weather_job(), "interval", minutes=5)
+scheduler.add_job(weather_job, "interval", minutes=5)
 
 api.run()
