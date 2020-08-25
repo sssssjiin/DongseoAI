@@ -2,5 +2,5 @@ from utils import config
 
 
 class Config:
-    emotiv = config.YAMLConfiguration("emotiv.yml")
-    emotiv.load()
+    config = config.YAMLConfiguration("config.yml")
+    config.load()
